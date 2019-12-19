@@ -23,12 +23,14 @@ namespace SBR_App
         private void comboBoxVon_KeyPress(object sender, KeyPressEventArgs e)
         {
             Verbindung(comboBoxVon);
+            comboBoxVon.DroppedDown = true;
 
         }
 
         private void comboBoxNach_KeyPress(object sender, KeyPressEventArgs e)
         {
             Verbindung(comboBoxNach);
+            comboBoxNach.DroppedDown = true;
         }
 
         private void Verbindung (ComboBox box)
@@ -42,13 +44,30 @@ namespace SBR_App
 
             string suchText = box.Text;
             List<Station> stationList = transport.GetStations(suchText).StationList;
-            Console.WriteLine(stationList);
 
             foreach (var s in stationList)
             {
                 if (s.Name != null)
                 {
                     box.Items.Add(s.Name);
+                }
+            }
+        }
+
+        private void buttonSuchen_Click(object sender, EventArgs e)
+        {
+            List<Connection> connectionPointsList = transport.GetConnections(comboBoxVon.Text, comboBoxNach.Text).ConnectionList;
+
+            listViewVerbindungen.Items.Clear();
+
+            foreach (var s in connectionPointsList)
+            {
+                if (s.Duration != null)
+                {
+                    var departureAb = DateTime.Parse(s.From.Departure);
+                    var departureAn = DateTime.Parse(s.To.Arrival);
+                    listViewVerbindungen.Items.Add("Von: " + s.From.Station.Name + "        Abfahrt: " + departureAb + "        Ankunft: " + departureAn + "        Nach: " + s.To.Station.Name);
+                    listViewVerbindungen.Items.Add("");
                 }
             }
         }
