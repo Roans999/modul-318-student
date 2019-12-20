@@ -33,5 +33,14 @@ namespace SwissTransport
 
             Assert.IsNotNull(connections);
         }
+
+        [TestMethod]
+        public void Stations()
+        {
+            testee = new Transport();
+            var stations = testee.GetStations("Sursee");
+
+            Assert.IsNotNull(stations);
+        }
     }
 }

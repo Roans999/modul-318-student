@@ -71,5 +71,43 @@ namespace SBR_App
                 }
             }
         }
+
+        private void comboBoxVon2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Verbindung(comboBoxVon2);
+            comboBoxVon2.DroppedDown = true;
+        }
+
+        private void buttonSuchen2_Click(object sender, EventArgs e)
+        {
+            List<StationBoard> StationBoardList = transport.GetStationBoard(comboBoxVon2.Text, string.Empty).Entries;
+
+            listBoxAnschluesse.Items.Clear();
+
+            foreach (var s in StationBoardList)
+            {
+                if (s.Name != null)
+                {
+                    listBoxAnschluesse.Items.Add("Von: " + comboBoxVon2.Text + "        Nach: " + s.To);
+                    listBoxAnschluesse.Items.Add("");
+                }
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.tabControl.SelectedIndex == 0)
+            {
+                this.AcceptButton = buttonSuchen;
+            }
+            if (this.tabControl.SelectedIndex == 1)
+            {
+                this.AcceptButton = buttonSuchen2;
+            }
+            if (this.tabControl.SelectedIndex == 2)
+            {
+                this.AcceptButton = buttonSuchen3;
+            }
+        }
     }
 }

@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listViewVerbindungen = new System.Windows.Forms.ListBox();
             this.comboBoxNach = new System.Windows.Forms.ComboBox();
             this.comboBoxVon = new System.Windows.Forms.ComboBox();
             this.buttonSuchen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listViewVerbindungen = new System.Windows.Forms.ListBox();
             this.listBoxAnschluesse = new System.Windows.Forms.ListBox();
             this.comboBoxVon2 = new System.Windows.Forms.ComboBox();
             this.buttonSuchen2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.listBoxHaltestellen = new System.Windows.Forms.ListBox();
             this.comboBoxVon3 = new System.Windows.Forms.ComboBox();
             this.buttonSuchen3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.CausesValidation = false;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1360, 1145);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.CausesValidation = false;
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Location = new System.Drawing.Point(12, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1360, 1145);
+            this.tabControl.TabIndex = 0;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -83,6 +84,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Verbundung";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listViewVerbindungen
+            // 
+            this.listViewVerbindungen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewVerbindungen.FormattingEnabled = true;
+            this.listViewVerbindungen.ItemHeight = 25;
+            this.listViewVerbindungen.Location = new System.Drawing.Point(4, 225);
+            this.listViewVerbindungen.Name = "listViewVerbindungen";
+            this.listViewVerbindungen.Size = new System.Drawing.Size(1334, 854);
+            this.listViewVerbindungen.TabIndex = 30;
             // 
             // comboBoxNach
             // 
@@ -149,42 +162,6 @@
             this.tabPage2.Text = "Anschlüsse";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.listBoxHaltestellen);
-            this.tabPage3.Controls.Add(this.comboBoxVon3);
-            this.tabPage3.Controls.Add(this.buttonSuchen3);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Location = new System.Drawing.Point(8, 39);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1344, 1098);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Haltestellen";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1186, 1163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 52);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Teilen per Email";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listViewVerbindungen
-            // 
-            this.listViewVerbindungen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewVerbindungen.FormattingEnabled = true;
-            this.listViewVerbindungen.ItemHeight = 25;
-            this.listViewVerbindungen.Location = new System.Drawing.Point(4, 225);
-            this.listViewVerbindungen.Name = "listViewVerbindungen";
-            this.listViewVerbindungen.Size = new System.Drawing.Size(1334, 854);
-            this.listViewVerbindungen.TabIndex = 30;
-            // 
             // listBoxAnschluesse
             // 
             this.listBoxAnschluesse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -206,6 +183,7 @@
             this.comboBoxVon2.Name = "comboBoxVon2";
             this.comboBoxVon2.Size = new System.Drawing.Size(1060, 33);
             this.comboBoxVon2.TabIndex = 34;
+            this.comboBoxVon2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxVon2_KeyPress);
             // 
             // buttonSuchen2
             // 
@@ -216,6 +194,7 @@
             this.buttonSuchen2.TabIndex = 33;
             this.buttonSuchen2.Text = "Suchen";
             this.buttonSuchen2.UseVisualStyleBackColor = true;
+            this.buttonSuchen2.Click += new System.EventHandler(this.buttonSuchen2_Click);
             // 
             // label4
             // 
@@ -225,6 +204,20 @@
             this.label4.Size = new System.Drawing.Size(56, 25);
             this.label4.TabIndex = 31;
             this.label4.Text = "Von:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.listBoxHaltestellen);
+            this.tabPage3.Controls.Add(this.comboBoxVon3);
+            this.tabPage3.Controls.Add(this.buttonSuchen3);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1344, 1098);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Haltestellen";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // listBoxHaltestellen
             // 
@@ -267,6 +260,16 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Von:";
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(1186, 1163);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 52);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Teilen per Email";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // WindowsFenster
             // 
             this.AcceptButton = this.buttonSuchen;
@@ -274,10 +277,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 1225);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "WindowsFenster";
             this.Text = "SBR App";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -289,7 +292,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button2;
