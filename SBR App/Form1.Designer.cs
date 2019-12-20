@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listViewVerbindungen = new System.Windows.Forms.ListBox();
@@ -47,6 +48,8 @@
             this.buttonSuchen3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelZeit = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -270,16 +273,33 @@
             this.button2.Text = "Teilen per Email";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // labelZeit
+            // 
+            this.labelZeit.AutoSize = true;
+            this.labelZeit.Location = new System.Drawing.Point(1250, 11);
+            this.labelZeit.Name = "labelZeit";
+            this.labelZeit.Size = new System.Drawing.Size(48, 25);
+            this.labelZeit.TabIndex = 21;
+            this.labelZeit.Text = "Zeit";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // WindowsFenster
             // 
             this.AcceptButton = this.buttonSuchen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 1225);
+            this.Controls.Add(this.labelZeit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl);
             this.Name = "WindowsFenster";
             this.Text = "SBR App";
+            this.Load += new System.EventHandler(this.WindowsFenster_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -288,6 +308,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -311,6 +332,8 @@
         private System.Windows.Forms.ComboBox comboBoxVon3;
         private System.Windows.Forms.Button buttonSuchen3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelZeit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

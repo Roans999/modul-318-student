@@ -109,5 +109,15 @@ namespace SBR_App
                 this.AcceptButton = buttonSuchen3;
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelZeit.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void WindowsFenster_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
     }
 }
