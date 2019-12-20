@@ -104,10 +104,6 @@ namespace SBR_App
             {
                 this.AcceptButton = buttonSuchen2;
             }
-            if (this.tabControl.SelectedIndex == 2)
-            {
-                this.AcceptButton = buttonSuchen3;
-            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
