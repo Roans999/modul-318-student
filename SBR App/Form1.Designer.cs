@@ -33,18 +33,20 @@
             this.labelZeit = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonSuchen2 = new System.Windows.Forms.Button();
-            this.comboBoxVon2 = new System.Windows.Forms.ComboBox();
             this.listBoxAnschluesse = new System.Windows.Forms.ListBox();
+            this.comboBoxVon2 = new System.Windows.Forms.ComboBox();
+            this.buttonSuchen2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonSuchen = new System.Windows.Forms.Button();
-            this.comboBoxVon = new System.Windows.Forms.ComboBox();
-            this.comboBoxNach = new System.Windows.Forms.ComboBox();
             this.listViewVerbindungen = new System.Windows.Forms.ListBox();
+            this.comboBoxNach = new System.Windows.Forms.ComboBox();
+            this.comboBoxVon = new System.Windows.Forms.ComboBox();
+            this.buttonSuchen = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -89,37 +91,6 @@
             this.tabPage2.Text = "Anschlüsse";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Von:";
-            // 
-            // buttonSuchen2
-            // 
-            this.buttonSuchen2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSuchen2.Location = new System.Drawing.Point(1190, 19);
-            this.buttonSuchen2.Name = "buttonSuchen2";
-            this.buttonSuchen2.Size = new System.Drawing.Size(120, 120);
-            this.buttonSuchen2.TabIndex = 33;
-            this.buttonSuchen2.Text = "Suchen";
-            this.buttonSuchen2.UseVisualStyleBackColor = true;
-            this.buttonSuchen2.Click += new System.EventHandler(this.buttonSuchen2_Click);
-            // 
-            // comboBoxVon2
-            // 
-            this.comboBoxVon2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxVon2.FormattingEnabled = true;
-            this.comboBoxVon2.Location = new System.Drawing.Point(87, 22);
-            this.comboBoxVon2.Name = "comboBoxVon2";
-            this.comboBoxVon2.Size = new System.Drawing.Size(1060, 33);
-            this.comboBoxVon2.TabIndex = 34;
-            this.comboBoxVon2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxVon2_KeyPress);
-            // 
             // listBoxAnschluesse
             // 
             this.listBoxAnschluesse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -132,8 +103,41 @@
             this.listBoxAnschluesse.Size = new System.Drawing.Size(1334, 854);
             this.listBoxAnschluesse.TabIndex = 36;
             // 
+            // comboBoxVon2
+            // 
+            this.comboBoxVon2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxVon2.FormattingEnabled = true;
+            this.comboBoxVon2.Location = new System.Drawing.Point(87, 22);
+            this.comboBoxVon2.Name = "comboBoxVon2";
+            this.comboBoxVon2.Size = new System.Drawing.Size(1060, 33);
+            this.comboBoxVon2.TabIndex = 34;
+            this.comboBoxVon2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxVon2_KeyPress);
+            // 
+            // buttonSuchen2
+            // 
+            this.buttonSuchen2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSuchen2.Location = new System.Drawing.Point(1190, 19);
+            this.buttonSuchen2.Name = "buttonSuchen2";
+            this.buttonSuchen2.Size = new System.Drawing.Size(120, 120);
+            this.buttonSuchen2.TabIndex = 33;
+            this.buttonSuchen2.Text = "Suchen";
+            this.buttonSuchen2.UseVisualStyleBackColor = true;
+            this.buttonSuchen2.Click += new System.EventHandler(this.buttonSuchen2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 25);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Von:";
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.listViewVerbindungen);
             this.tabPage1.Controls.Add(this.comboBoxNach);
             this.tabPage1.Controls.Add(this.comboBoxVon);
@@ -148,45 +152,17 @@
             this.tabPage1.Text = "Verbundung";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // listViewVerbindungen
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 25);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Von:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Nach:";
-            // 
-            // buttonSuchen
-            // 
-            this.buttonSuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSuchen.Location = new System.Drawing.Point(1189, 19);
-            this.buttonSuchen.Name = "buttonSuchen";
-            this.buttonSuchen.Size = new System.Drawing.Size(120, 120);
-            this.buttonSuchen.TabIndex = 25;
-            this.buttonSuchen.Text = "Suchen";
-            this.buttonSuchen.UseVisualStyleBackColor = true;
-            this.buttonSuchen.Click += new System.EventHandler(this.buttonSuchen_Click);
-            // 
-            // comboBoxVon
-            // 
-            this.comboBoxVon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.listViewVerbindungen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxVon.FormattingEnabled = true;
-            this.comboBoxVon.Location = new System.Drawing.Point(86, 22);
-            this.comboBoxVon.Name = "comboBoxVon";
-            this.comboBoxVon.Size = new System.Drawing.Size(1060, 33);
-            this.comboBoxVon.TabIndex = 27;
-            this.comboBoxVon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxVon_KeyPress);
+            this.listViewVerbindungen.FormattingEnabled = true;
+            this.listViewVerbindungen.ItemHeight = 25;
+            this.listViewVerbindungen.Location = new System.Drawing.Point(4, 225);
+            this.listViewVerbindungen.Name = "listViewVerbindungen";
+            this.listViewVerbindungen.Size = new System.Drawing.Size(1334, 854);
+            this.listViewVerbindungen.TabIndex = 30;
             // 
             // comboBoxNach
             // 
@@ -199,17 +175,45 @@
             this.comboBoxNach.TabIndex = 28;
             this.comboBoxNach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxNach_KeyPress);
             // 
-            // listViewVerbindungen
+            // comboBoxVon
             // 
-            this.listViewVerbindungen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxVon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewVerbindungen.FormattingEnabled = true;
-            this.listViewVerbindungen.ItemHeight = 25;
-            this.listViewVerbindungen.Location = new System.Drawing.Point(4, 225);
-            this.listViewVerbindungen.Name = "listViewVerbindungen";
-            this.listViewVerbindungen.Size = new System.Drawing.Size(1334, 854);
-            this.listViewVerbindungen.TabIndex = 30;
+            this.comboBoxVon.FormattingEnabled = true;
+            this.comboBoxVon.Location = new System.Drawing.Point(86, 22);
+            this.comboBoxVon.Name = "comboBoxVon";
+            this.comboBoxVon.Size = new System.Drawing.Size(1060, 33);
+            this.comboBoxVon.TabIndex = 27;
+            this.comboBoxVon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxVon_KeyPress);
+            // 
+            // buttonSuchen
+            // 
+            this.buttonSuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSuchen.Location = new System.Drawing.Point(1189, 19);
+            this.buttonSuchen.Name = "buttonSuchen";
+            this.buttonSuchen.Size = new System.Drawing.Size(120, 120);
+            this.buttonSuchen.TabIndex = 25;
+            this.buttonSuchen.Text = "Suchen";
+            this.buttonSuchen.UseVisualStyleBackColor = true;
+            this.buttonSuchen.Click += new System.EventHandler(this.buttonSuchen_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Nach:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 25);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Von:";
             // 
             // tabControl
             // 
@@ -225,6 +229,22 @@
             this.tabControl.Size = new System.Drawing.Size(1360, 1145);
             this.tabControl.TabIndex = 0;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 25);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Zeit:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(86, 104);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker1.TabIndex = 31;
             // 
             // WindowsFenster
             // 
@@ -265,6 +285,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
